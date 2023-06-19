@@ -23,7 +23,7 @@ void Chunk::Init(std::size_t blockSize, unsigned char blocks) {
   }
 }
 
-void *Chunk::Allocate(std::size_t blockSize) {
+void* Chunk::Allocate(std::size_t blockSize) {
   if (blocksAvailable == 0)
     return nullptr;
   auto ptr = (pData + (blockSize * firstAvailableBlock));
